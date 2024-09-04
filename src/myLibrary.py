@@ -59,8 +59,7 @@ def getTimeStamp():
     fullDate = f"{dt.strftime("%m")}/{dt.strftime("%d")}/{dt.strftime("%Y")}"
     time = f"{dt.strftime("%I")}:{dt.strftime("%M")}::{dt.strftime("%S")} "
     period = f"{dt.strftime("%p")}"
-    TimeStamp = fullDate + " @ " + time + period
-    return TimeStamp
+    return fullDate + " @ " + time + period
 
 def getTimeStampFile():
     # Returns date in format: mm-dd-YYYY_@_HH:MM—SS-[AM/PM]
@@ -69,8 +68,7 @@ def getTimeStampFile():
     fullDate = f"{dt.strftime("%m")}-{dt.strftime("%d")}-{dt.strftime("%Y")}"
     time = f"{dt.strftime("%I")}-{dt.strftime("%M")}--{dt.strftime("%S")}-"
     period = f"{dt.strftime("%p")}"
-    TimeStamp = fullDate + "_@_" + time + period
-    return TimeStamp
+    return fullDate + "_@_" + time + period
 
 # **************************************
 # ***         File Functions         ***
