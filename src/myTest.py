@@ -17,8 +17,14 @@ __status__ = "Prototype"
 
 import myLibrary as ml
 
-strTest1 = "True"
-strTest2 = "False"
 
-print(f"Is Boolean: {ml.isBoolFromText(strTest1)}")
-print(f"Is Boolean: {ml.isBoolFromText(strTest2)}")
+# Testing the getTimeStamp()
+print(f"Current Time Stamp: {ml.getTimeStamp()}")
+# Testing the getTimeStampFile()
+print(f"Current Time Stamp for File: {ml.getTimeStampFile()}")
+
+# Testing the isBoolFromText() Function
+# strTest1 = "True"
+# strTest2 = "False"
+# print(f"Is Boolean: {ml.isBoolFromText(strTest1)}")
+# print(f"Is Boolean: {ml.isBoolFromText(strTest2)}")

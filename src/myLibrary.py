@@ -30,7 +30,7 @@ __credits__ = ["Chuck Nelson"]
 __license__ = "MIT"
 __maintainer__ = "Chuck Nelson"
 __email__ = "chuck_nelson@hotmail.com"
-__status__ = "Prototype"
+__status__ = "Ongoing Development"
 
 # Created Date: 09/03/2024
 # Last Updated Date: 
@@ -52,6 +52,25 @@ def isBoolFromText(strValue):
 # **************************************
 # ***     Date / Time Functions      ***
 # **************************************
+
+def getTimeStamp():
+    # Returns date in format: mm-dd-YYYY @ HH:MM::SS [AM/PM]
+    dt = datetime.datetime.now()
+    fullDate = f"{dt.strftime("%m")}/{dt.strftime("%d")}/{dt.strftime("%Y")}"
+    time = f"{dt.strftime("%I")}:{dt.strftime("%M")}::{dt.strftime("%S")} "
+    period = f"{dt.strftime("%p")}"
+    TimeStamp = fullDate + " @ " + time + period
+    return TimeStamp
+
+def getTimeStampFile():
+    # Returns date in format: mm-dd-YYYY_@_HH:MM—SS-[AM/PM]
+    # This returns a stamp which can be used in a file name.
+    dt = datetime.datetime.now()
+    fullDate = f"{dt.strftime("%m")}-{dt.strftime("%d")}-{dt.strftime("%Y")}"
+    time = f"{dt.strftime("%I")}-{dt.strftime("%M")}--{dt.strftime("%S")}-"
+    period = f"{dt.strftime("%p")}"
+    TimeStamp = fullDate + "_@_" + time + period
+    return TimeStamp
 
 # **************************************
 # ***         File Functions         ***
