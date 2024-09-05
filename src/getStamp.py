@@ -34,6 +34,7 @@ def main():
     result = getArgv()
     if not result: # No argument was given
         print(f"Missing Argument! Please try again.")
+        printHelp()
     else:
         printStamp(result.lower())
 
@@ -44,6 +45,17 @@ def getArgv():
         return False
     return argument
 
+def printHelp():
+    print("\n                getStamp Help                ")
+    print("=============================================")
+    print("  This app returns a date / time stamp ")
+    print("  formatted for either display or for a file")
+    print("  name.\n\n")
+    print("     Command Line Arguments")
+    print("         getStamp.py [display]")
+    print("         getStamp.py [file]")
+    print("\n\nEND HELP!\n\n")
+
 
 def printStamp(strArgv):
     if strArgv == "display":
@@ -52,5 +64,6 @@ def printStamp(strArgv):
         print(f"\n\nFile Stamp: {ml.getTimeStampFile()}\n\n")
     else:
         print(f"\n\nUnrecognized command line argument!\n\n")
+        printHelp()
 
 main()

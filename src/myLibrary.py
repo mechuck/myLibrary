@@ -33,7 +33,7 @@ __email__ = "chuck_nelson@hotmail.com"
 __status__ = "Ongoing Development"
 
 # Created Date: 09/03/2024
-# Last Updated Date: 09/04/2024 @ 08:24::53 PM
+# Last Updated Date: 09/04/2024 @ 08:35::33 PM
 
 import datetime, os, sys
 
@@ -46,7 +46,7 @@ import datetime, os, sys
 # **************************************
 
 def isBoolFromText(strValue):
-    # Returns if the string value = "True".
+    # Returns BOOL True if the string value = "True".
     if strValue.lower() == "true": return True
     else: return False
 
