@@ -10,9 +10,9 @@
 
 ## Documentation
 
-[myLibrary Documentation](/src/myLibrary_py_Method_Guide.md)
+[myLibrary Documentation](/docs/myLibrary_py_Method_Guide.md)
 
 ## Included Mini Aps
 
- src/myTest.py is an app to test the code in myLibrary.py.
- src/getStamp.py is a mini app that will get a time stamp.
+- src/myTest.py is an app to test the code in myLibrary.py.
+- src/getStamp.py is a mini app that will get a time stamp.
