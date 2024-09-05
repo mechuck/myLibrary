@@ -74,3 +74,22 @@ def getTimeStampFile():
 # **************************************
 # ***         File Functions         ***
 # **************************************
+
+def saveFile(strPathFile, strText, intMode):
+    # Check for errors
+    if strPathFile == "": return False, "Error: No path and file name defined"
+    if strText == "": return False, "Error: There is no text to save!"
+    if intMode not in range(1, 4): return False, "Error: Mode not set correctly!"
+
+    if intMode in range(1, 4):
+        if intMode == 1: file = open(strPathFile, "at")
+        elif intMode == 2: file = open(strPathFile, "wt")
+        elif intMode == 3: 
+            try:
+                file = open(strPathFile, "xt")
+            except FileExistsError:
+                return False, "Error: File already exists!"
+
+    file.write(strText)
+    file.close()
+    return True, "File Written!"
