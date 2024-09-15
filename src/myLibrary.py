@@ -33,7 +33,7 @@ __email__ = "chuck_nelson@hotmail.com"
 __status__ = "Ongoing Development"
 
 # Created Date: 09/03/2024
-# Last Updated Date: 09/05/2024 @ 02:39::51 AM
+# Last Updated Date: 09/15/2024 @ 03:53::46 PM
 
 import datetime, os, sys
 
@@ -74,6 +74,21 @@ def getTimeStampFile():
 # **************************************
 # ***         File Functions         ***
 # **************************************
+
+def checkPath(path):
+    current_path = os.getcwd()
+    subdir_path = os.path.join(current_path, path)
+    if os.path.isdir(subdir_path):
+        return True
+    else:
+        return False
+    
+def mkDir(path):
+    if not checkPath(path):
+        os.makedirs(path)
+        return True
+    else: return False
+
 
 def saveFile(strPathFile, strText, intMode):
     # Check for errors
