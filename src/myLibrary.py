@@ -33,9 +33,9 @@ __email__ = "chuck_nelson@hotmail.com"
 __status__ = "Ongoing Development"
 
 # Created Date: 09/03/2024
-# Last Updated Date: 09/15/2024 @ 03:53::46 PM
+# Last Updated Date: 09/17/2024 @ 07:41::44 PM
 
-import datetime, os, sys
+import datetime, os, sys, shutil
 
 # ==============================================
 # ===             Functions                  ===
@@ -89,6 +89,14 @@ def mkDir(path):
         return True
     else: return False
 
+def copyFiles(FileNames, orgPath, newPath):
+    Exist = mkDir(newPath)
+    for File in FileNames:
+        srcFile = os.path.join(orgPath, File)
+        destFile = os.path.join(newPath, File)
+        if os.path.isfile(srcFile):
+            shutil.copy(srcFile, destFile)
+    return
 
 def saveFile(strPathFile, strText, intMode):
     # Check for errors
