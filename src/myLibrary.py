@@ -33,7 +33,7 @@ __email__ = "chuck_nelson@hotmail.com"
 __status__ = "Ongoing Development"
 
 # Created Date: 09/03/2024
-# Last Updated Date: 09/17/2024 @ 07:41::44 PM
+# Last Updated Date: 09/20/2024 @ 04:36::03 AM
 
 import datetime, os, sys, shutil
 
@@ -82,12 +82,6 @@ def checkPath(path):
         return True
     else:
         return False
-    
-def mkDir(path):
-    if not checkPath(path):
-        os.makedirs(path)
-        return True
-    else: return False
 
 def copyFiles(FileNames, orgPath, newPath):
     Exist = mkDir(newPath)
@@ -97,6 +91,12 @@ def copyFiles(FileNames, orgPath, newPath):
         if os.path.isfile(srcFile):
             shutil.copy(srcFile, destFile)
     return
+    
+def mkDir(path):
+    if not checkPath(path):
+        os.makedirs(path)
+        return True
+    else: return False
 
 def saveFile(strPathFile, strText, intMode):
     # Check for errors
