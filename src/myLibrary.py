@@ -54,6 +54,13 @@ def isBoolFromText(strValue):
 # ***     Date / Time Functions      ***
 # **************************************
 
+def getTimeShort():
+    # Returns a HH:MM::SS [AM/PM]
+    dt = datetime.datetime.now()
+    time = f"{dt.strftime("%I")}:{dt.strftime("%M")}::{dt.strftime("%S")} "
+    period = f"{dt.strftime("%p")}"
+    return time + period
+
 def getTimeStamp():
     # Returns date in format: mm-dd-YYYY @ HH:MM::SS [AM/PM]
     dt = datetime.datetime.now()
